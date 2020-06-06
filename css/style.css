@@ -1,0 +1,293 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Baloo Paaji 2', cursive;
+    /* transition-property: all;
+    transition-duration: .5s;
+    transition-timing-function: ease; */
+}
+
+header {
+    background: #fff;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.130);
+}
+
+ /*NAV*/
+.navbar-nav {
+    padding: 0px 160px;
+    font-size: 1.2rem;
+    margin: 0px;
+    font-weight: 400;
+}
+
+.navbar-brand img {
+    padding: 1px;
+    width: 250px;
+}
+
+.navbar .navbar-toggler {
+    background: #fff;
+    border:none;
+    margin: 0px;
+}
+
+.navbar .navbar-toggler .navbar-toggler-icon {
+    border:none;
+}
+
+.navbar-nav a{
+    padding: 0px;
+}
+
+.navbar-nav a,
+.navbar-nav a:after,
+.navbar-nav a::before {
+    transition: all .5s;
+}
+
+.navbar-nav a{
+    position: relative;
+    font-size: 1.2rem;
+}
+
+.navbar-nav a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: #dd4c60;
+    height: 1px;    
+}
+
+.navbar-nav a:hover:after {
+    width: 100%;
+}
+
+.navbar-nav a:hover{
+    font-size: 1.2rem;
+    color: #dd4c60 !important;
+    text-decoration: none;
+}
+
+.nav-link {
+    color: #333333 !important;
+}
+
+.navbar-brand{
+    padding-left: 180px;
+}
+
+.nav-link.active {
+    font-size: 1.2rem;
+    color: #dd4c60 !important;
+}
+
+
+/*SLIDER/CAROUSEL*/
+.carousel {
+    max-width: 1800px;
+    margin: auto;
+    margin-bottom: 100px;
+    height: 100%;
+}
+
+.carousel-inner {
+    max-height: 850px;
+}
+
+
+/*PRODUCTOS*/
+
+/*shadow*/
+.row img {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.130);
+    border-radius: 9px;
+}
+/*---------*/
+
+.row h3 {
+   font-size: 3rem;
+   color: #dd4c60;
+   padding-top: 100px;
+   margin-bottom: 50px;
+   font-weight: 600;
+}
+
+.row h4 {
+    color: #54afad;
+    font-size: 2rem;
+}
+
+.row .btn {
+    font-size: 0.9rem;
+    color: #dd4c60;
+}
+
+/* .row .btn:hover {
+    font-size: 0.9rem;
+    color: #f9cc3a;
+    text-decoration: underline;
+} */
+
+.row .btn{
+    position: relative;
+    padding: 0px;
+}
+
+.row .btn,
+.row .btn:after,
+.row .btn::before {
+    transition: all .5s;
+}
+
+.row .btn:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: #dd4c60;
+    height: 1px;
+}
+
+.row .btn:hover:after {
+    width: 100%;
+}
+
+/*MEDIA QUERYS PRODUCTOS*/
+
+@media (max-width: 1170px) {
+    .navbar-nav {
+        padding: 0px 100px;
+    }
+    .row h3{
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 1170px) {
+    .navbar-nav {
+        padding: 0px 100px;
+    }
+    .row h3{
+        text-align: center;
+    }
+}
+
+@media (max-width: 990px){
+    .navbar-brand {
+        padding-left: 0px;
+    }
+}
+
+@media (max-width: 768PX){
+    .row h4,
+    .row p {
+        justify-content: center;
+        text-align: center;
+        margin: 10px auto;
+    }
+}
+
+@media (max-width: 768PX){
+    .row h4 {
+        margin-top: 30px;
+    }
+}
+
+
+@media (max-width: 768PX){
+    .row a {
+        justify-content: center;
+        text-align: center;
+        margin: 10px auto;
+    }
+}
+
+@media (max-width: 768PX){
+    .middle {
+        flex-direction: column-reverse;
+    }
+}
+
+@media (max-width: 768px){
+    .carousel{
+        display: none;
+    }
+}
+
+@media (max-width: 450px){
+    .carousel-inner {
+        margin-top: 50px;
+        max-height: 850px;
+    }
+}
+
+@media (min-width: 768px){
+    .mobile img{
+        display:none;
+        height: 100vh;
+    }
+}
+
+/*contacto*/
+
+
+.contacto {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.130);
+    background: rgba(249, 204, 85, 0.7);
+    margin-top: 180px;
+}
+
+form {
+    background: rgba(249, 204, 85, 0);
+}
+
+
+.row h3{
+    padding: 50px 0px 0px 0px;
+}
+
+.row .btn-fb,
+.row .btn-ins,
+.row i,
+.row .btn-whatsapp {
+    color: #54afad;
+    padding: 0px;
+    font-size: 1.2rem;
+    margin: 0px;
+}
+
+form .btn {
+    color: #dd4c60;
+    cursor: pointer;
+    border-width: 3px;
+    border-radius: 7px;
+    border-color: #54afad;
+    font-weight: 400;
+    margin-bottom: 0pxpx;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.130);
+}
+
+form .btn:hover {
+    background: #54afad;
+    color: #fff;
+}
+
+
+/*mapa google*/
+.contacto iframe {
+    background: rgba(249, 204, 85, 0.7);
+    margin-bottom: 40px;
+    margin-top: 50px;
+}
