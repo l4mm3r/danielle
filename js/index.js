@@ -57,7 +57,8 @@ $("#contact-form").submit(function validateForm() {
 
   if (!filter.test(email.value)) {
     valid = 0;
-    email_validation.innerHTML = "Por favor ingrese una dirección de email valida";
+    email_validation.innerHTML =
+      "Por favor ingrese una dirección de email valida";
     email_validation.style.display = "block";
     email_validation.parentNode.style.backgroundColor = "#FFDFDF";
   } else {
