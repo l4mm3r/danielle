@@ -11,11 +11,13 @@ $("#contact-form").submit(function validateForm() {
   var name_validation = document.getElementById("name_validation");
   var message = document.getElementById("textForm");
   var message_validation = document.getElementById("message_validation");
+  var phone = document.getElementById("telForm");
+  var phone_validation = document.getElementById("phone_validation");
   var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 
   if (name.value === "") {
     valid = 0;
-    name_validation.innerHTML = "Campo requerido";
+    name_validation.innerHTML = "Por favor ingrese su nombre";
     name_validation.style.display = "block";
     name_validation.parentNode.style.backgroundColor = "#FFDFDF";
   } else {
@@ -35,7 +37,7 @@ $("#contact-form").submit(function validateForm() {
 
   if (email.value === "") {
     valid = 0;
-    email_validation.innerHTML = "Campo requerido";
+    email_validation.innerHTML = "Por favor ingrese su email";
     email_validation.style.display = "block";
     email_validation.parentNode.style.backgroundColor = "#FFDFDF";
   } else {
@@ -43,15 +45,27 @@ $("#contact-form").submit(function validateForm() {
     email_validation.parentNode.style.backgroundColor = "transparent";
   }
 
+  if (phone.value === "") {
+    valid = 0;
+    phone_validation.innerHTML = "Por favor ingrese su número de teléfono";
+    phone_validation.style.display = "block";
+    email_validation.parentNode.style.backgroundColor = "#FFDFDF";
+  } else {
+    phone_validation.style.display = "none";
+    phone_validation.parentNode.style.backgroundColor = "transparent";
+  }
+
   if (!filter.test(email.value)) {
     valid = 0;
-    email_validation.innerHTML = "Dirección de email incorrecta";
+    email_validation.innerHTML =
+      "Por favor ingrese una dirección de email valida";
     email_validation.style.display = "block";
     email_validation.parentNode.style.backgroundColor = "#FFDFDF";
   } else {
     email_validation.style.display = "none";
     email_validation.parentNode.style.backgroundColor = "transparent";
   }
+
   if (!valid) return false;
   swal({
     title: "Mensaje enviado con éxito",
